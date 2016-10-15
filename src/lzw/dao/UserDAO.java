@@ -1,10 +1,11 @@
-package lezhuwang.dao;
+package lzw.dao;
 
-import lezhuwang.idao.IUserDAO;
-import lezhuwang.model.User;
-import lezhuwang.util.DBUtil;
+import lzw.idao.IUserDAO;
+import lzw.model.User;
+import lzw.util.DBUtil;
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -116,5 +117,30 @@ public  class UserDAO implements IUserDAO {
         }
         return list;
 	}
+	@Override
+	public boolean checkPwd(String userLoginName, String userPswd) {
+		// 通过用户名查询数据库，得到密码进行比较
+		try {
+			String sql = "select * from user where user_login_name = '" + userLoginName + "';";
+		    DBUtil db = new DBUtil();
+		    //System.out.println(sql);
+		    db.openConnection();
+		    ResultSet rst = db.execQuery(sql);
+		    if(rst != null) {
+		    	while (rst.next()) {
+		    		String pswd = rst.getString("user_password");
+		    		if (userPswd.equals(pswd)) {
+		    			db.close(rst);
+		    			return true;
+		    		}
+		    	}
+		    }
+		    db.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
 	
 }

@@ -1,4 +1,4 @@
-package lezhuwang.model;
+package lzw.model;
 
 public class Manager {
 	private int ManagerId;

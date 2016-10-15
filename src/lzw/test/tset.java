@@ -1,15 +1,15 @@
-package lezhuwang.test;
+package lzw.test;
 
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
 
-import lezhuwang.model.HelpInfo;
-import lezhuwang.model.Manager;
-import lezhuwang.model.User;
-import lezhuwang.service.HelpInfoSrv;
-import lezhuwang.service.ManagerSrv;
-import lezhuwang.service.UserSrv;
+import lzw.model.HelpInfo;
+import lzw.model.Manager;
+import lzw.model.User;
+import lzw.service.HelpInfoSrv;
+import lzw.service.ManagerSrv;
+import lzw.service.UserSrv;
 
 public class tset {
 
@@ -22,13 +22,13 @@ public class tset {
 		HelpInfo helpInfo = new HelpInfo();
 		
 		//user.setUserId(1);
-		user.setUserName("wang");
-		user.setUserLoginName("wang@work.com");
+		user.setUserName("wang1");
+		user.setUserLoginName("wang1@work.com");
 		user.setUserPasswd("admin");
 		user.setUserLocation("Î÷°²");
 		user.setUserSex("ÄÐ");
 		user.setUserPhone("123456");
-		user.setUserEmail("wang@work.com");
+		user.setUserEmail("wang1@work.com");
 		user.setUserAcount(100);
 		user.setUserTrust(66);
 		user.setUserPicPath("src/image/img1.jpg");

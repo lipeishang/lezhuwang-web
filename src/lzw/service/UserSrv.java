@@ -1,9 +1,9 @@
-package lezhuwang.service;
+package lzw.service;
 
 import java.util.List;
-import lezhuwang.idao.DAOFactory;
-import lezhuwang.idao.IUserDAO;
-import lezhuwang.model.User;
+import lzw.idao.DAOFactory;
+import lzw.idao.IUserDAO;
+import lzw.model.User;
 
 public class UserSrv {
 	private IUserDAO userDAO=DAOFactory.creatUserDAO();
@@ -26,6 +26,10 @@ public class UserSrv {
 	
 	public List<User> FetchAll(){
 		return userDAO.select("");		
+	}
+
+	public boolean checkPwd(String userLoginName, String userPswd) {
+		return userDAO.checkPwd(userLoginName, userPswd);
 	}
 	
 }

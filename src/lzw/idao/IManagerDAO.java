@@ -1,5 +1,5 @@
-package lezhuwang.idao;
-import lezhuwang.model.Manager;
+package lzw.idao;
+import lzw.model.Manager;
 import java.util.List;
 
 public interface IManagerDAO{

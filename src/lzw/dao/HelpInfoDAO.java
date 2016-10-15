@@ -1,7 +1,7 @@
-package lezhuwang.dao;
-import lezhuwang.idao.IHelpInfoDAO;
-import lezhuwang.model.HelpInfo;
-import lezhuwang.util.DBUtil;
+package lzw.dao;
+import lzw.idao.IHelpInfoDAO;
+import lzw.model.HelpInfo;
+import lzw.util.DBUtil;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.Time;

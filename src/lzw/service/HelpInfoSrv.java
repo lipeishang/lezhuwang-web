@@ -1,9 +1,9 @@
-package lezhuwang.service;
+package lzw.service;
 
 import java.util.List;
-import lezhuwang.idao.DAOFactory;
-import lezhuwang.idao.IHelpInfoDAO;
-import lezhuwang.model.HelpInfo;
+import lzw.idao.DAOFactory;
+import lzw.idao.IHelpInfoDAO;
+import lzw.model.HelpInfo;
 
 public class HelpInfoSrv {
 	private IHelpInfoDAO helpInfoDAO = DAOFactory.creatHelpInfoDAO();

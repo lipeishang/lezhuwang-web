@@ -1,4 +1,4 @@
-package lezhuwang.model;
+package lzw.model;
 
 import java.sql.Time;
 

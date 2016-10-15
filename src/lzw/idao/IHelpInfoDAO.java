@@ -1,5 +1,5 @@
-package lezhuwang.idao;
-import lezhuwang.model.HelpInfo;
+package lzw.idao;
+import lzw.model.HelpInfo;
 import java.util.List;
 
 public interface IHelpInfoDAO{

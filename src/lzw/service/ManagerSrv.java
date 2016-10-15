@@ -1,9 +1,9 @@
-package lezhuwang.service;
+package lzw.service;
 
 import java.util.List;
-import lezhuwang.idao.DAOFactory;
-import lezhuwang.idao.IManagerDAO;
-import lezhuwang.model.Manager;
+import lzw.idao.DAOFactory;
+import lzw.idao.IManagerDAO;
+import lzw.model.Manager;
 
 public class ManagerSrv {
 	private IManagerDAO managerDAO = DAOFactory.creatManagerDAO();

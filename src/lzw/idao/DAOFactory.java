@@ -1,5 +1,5 @@
-package lezhuwang.idao;
-import lezhuwang.dao.*;
+package lzw.idao;
+import lzw.dao.*;
 
 public class DAOFactory {
 	public static IUserDAO creatUserDAO(){

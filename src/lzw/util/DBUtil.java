@@ -1,4 +1,4 @@
-package lezhuwang.util;
+package lzw.util;
 
 import java.io.*;
 import java.sql.Connection;
@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.Properties; 
 
 public class DBUtil {
-	private final String dbConnFile = "src/lezhuwang/database/jdbc.properties";
+	private final String dbConnFile = "/resource/database/jdbc.properties";
 	private Connection conn=null;
 	private String dbDriver; 
     private String dbURL;
@@ -20,7 +20,7 @@ public class DBUtil {
     private void loadConnProperties(){  
         Properties props = new Properties();  
         try {  
-            props.load(new FileInputStream(dbConnFile));
+        	props.load(new FileInputStream(this.getClass().getResource("/").toString() + dbConnFile));
         } catch (FileNotFoundException e) {  
             e.printStackTrace();  
         } catch (IOException e) {  
@@ -47,8 +47,8 @@ public class DBUtil {
         }
 		return	false;
 	}
-	
-	
+
+
 	protected void finalize() throws Exception{
 		try {
 		if(null!=conn)

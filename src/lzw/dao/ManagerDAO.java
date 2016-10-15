@@ -1,8 +1,8 @@
-package lezhuwang.dao;
+package lzw.dao;
 
-import lezhuwang.idao.IManagerDAO;
-import lezhuwang.model.Manager;
-import lezhuwang.util.DBUtil;
+import lzw.idao.IManagerDAO;
+import lzw.model.Manager;
+import lzw.util.DBUtil;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
