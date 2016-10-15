@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.Properties; 
 
 public class DBUtil {
-	private final String dbConnFile = "/resource/database/jdbc.properties";
+	private final String dbConnFile = "resource/database/jdbc.properties";
 	private Connection conn=null;
 	private String dbDriver; 
     private String dbURL;
@@ -20,7 +20,7 @@ public class DBUtil {
     private void loadConnProperties(){  
         Properties props = new Properties();  
         try {  
-        	props.load(new FileInputStream(this.getClass().getResource("/").toString() + dbConnFile));
+        	props.load(new FileInputStream(this.getClass().getResource("/").toString().substring(6) + dbConnFile));
         } catch (FileNotFoundException e) {  
             e.printStackTrace();  
         } catch (IOException e) {  
